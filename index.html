@@ -13,11 +13,60 @@
       .username {
         font-weight: bold;
       }
+      .user2 {
+        font-style: oblique;
+        font-weight: bolder;
+        color: aqua;
+        padding-left: 5px;
+        background-image: none;
+        text-decoration: wavy;
+      }
+      #demobox {
+        background-color: #cfc;
+        left: 500px;
+      }
+      #demobox {
+        background-color: #cfc;
+        padding: 10px;
+        border: 1px solid green;
+      }
+      .input-color {
+        position: relative;
+      }
+      .input-color input {
+        padding-left: 20px;
+      }
+      .input-color .color-box {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: #ccc;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
     </style>
   </head>
   <body>
     <img src="images/Berry_profil_krone_Fliege.png " />
     <p class="username">Berry</p>
     <p>Multiple server support soon</p>
+    <p class="user2">This is clearly a test</p>
+    <div id="demobox">
+      This is a demo box to illustrate the code given in thesitewizard.com's
+      tutorial on creating coloured boxes.
+      <svg width="20" height="20">
+        <rect
+          width="20"
+          height="20"
+          style="fill: #e9e612; stroke-width: 3; stroke: rgb(0, 0, 0)"
+        />
+      </svg>
+    </div>
+    <div class="input-color">
+      <input type="text" value="Orange" />
+      <div class="color-box" style="background-color: #220aff"></div>
+      <!-- Replace "#FF850A" to change the color -->
+    </div>
   </body>
 </html>
