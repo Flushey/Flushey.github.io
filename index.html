@@ -53,8 +53,58 @@
     <p>Multiple server support soon</p>
     <p class="user2">This is clearly a test</p>
     <div id="demobox">
-      This is a demo box to illustrate the code given in thesitewizard.com's
-      tutorial on creating coloured boxes.
+      plugins {
+   id 'java'
+   id 'application'
+   id 'com.github.johnrengelman.shadow' version '6.1.0'
+
+
+}
+
+mainClassName = 'Berry.BOT.Bot'
+
+
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven{
+        url = uri("https://dl.bintray.com/sedmelluq/com.sedmelluq")
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    }
+}
+
+dependencies {
+    implementation group: 'net.dv8tion', name: 'JDA', version: '4.3.0_324'  //old version 4.3.0_307
+    implementation group: 'me.duncte123', name: 'botCommons', version: '1.0.73'
+    implementation group: 'com.jagrosh', name: 'jda-utilities', version: '3.0.1'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    implementation group: 'io.github.cdimascio', name: 'java-dotenv', version: '5.2.2'
+   // implementation group: 'org.menudocs', name: 'paste-client-java', version: '1.0.16'
+    implementation group: 'club.minnced', name: 'discord-webhooks', version: '0.1.8'
+    implementation group: 'com.sedmelluq', name: 'lavaplayer', version: '1.3.78' //old 1.3.77
+
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '4.0.3'     //für Database
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.30.1' //auch für Database
+    implementation group: 'com.github.natanbc', name: 'lavaplayer-arm-natives', version: '1.3.10'            		//ARM Raspberry support for lava player debendancie!!!!!!!!!!!!!!!!!!!!
+	implementation 'commons-validator:commons-validator:1.6' // link validate
+	
+	implementation 'org.mongodb:mongo-java-driver:2.12.3'//not in use
+	implementation 'joda-time:joda-time:2.10.10' //better calendet system	
+	
+	
+	
+}
+
+
+compileJava.options.encoding = 'UTF-8'
+
       <svg width="20" height="20">
         <rect
           width="20"
